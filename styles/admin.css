@@ -6,7 +6,7 @@
 	--primary-text-color: rgb(100, 100, 100);
 	--secondary-text-color: white;
 	--primary-button-color: rgb(0, 101, 179);
-	--secondary-button-color: rgb(40, 40, 40);
+	--secondary-button-color: rgb(100, 100, 100);
 }
 
 * {
@@ -34,7 +34,7 @@ html {
 }
 .cover figcaption {
 	position: absolute;
-	transform: translate(25%, 400%);
+	transform: translate(20%, 400%);
 	text-align: center;
 }
 .cover h2 {
@@ -45,10 +45,12 @@ html {
 form {
 	border: var(--primary-border);
 	width: 90%;
+	height: 80vh;
+	max-width: 400px;
 	border-radius: var(--primary-border-radius);
 	padding: 1rem;
 	margin: auto;
-	margin-top: 2rem;
+	margin-top: 3rem;
 }
 
 fieldset {
@@ -64,6 +66,7 @@ legend {
 	flex-direction: column;
 	gap: 2px;
 	margin: 2rem 0;
+	padding-top: 1rem;
 	width: 100%;
 }
 
@@ -120,9 +123,6 @@ input[type='submit'] {
 	main {
 		display: grid;
 		grid-template-columns: 1.5fr 1fr;
-	}
-	form {
-		margin-top: 7rem;
 	}
 	.cover {
 		display: flex;

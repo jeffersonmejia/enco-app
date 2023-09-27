@@ -21,32 +21,178 @@
 			<nav>
 				<ul class="navbar-items">
 					<li>
-						<h1>Enco App</h1>
+						<h1 class="logo">Enco App</h1>
 					</li>
 					<li>
 						<span class="material-symbols-outlined account-navbar"> person </span>
-						<ul class="account-navbar-items">
+						<ul class="account-navbar-items hidden">
 							<li>
-								<span class="material-symbols-outlined"> manage_accounts </span>
-								<p>Mi cuenta</p>
+								<a href="">
+									<span class="material-symbols-outlined"> manage_accounts </span>
+									<p>Mi cuenta</p>
+								</a>
 							</li>
 							<li>
-								<span class="material-symbols-outlined"> logout </span>
-								<a href="./clients.html">Salir</a>
+								<a href="./clients.html">
+									<span class="material-symbols-outlined"> logout </span>
+									<p>Salir</p>
+								</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 			</nav>
 			<section class="welcome-section">
-				<h1>Bienvenido, Jefferson</h1>
+				<h2>Bienvenido, Jefferson</h2>
 			</section>
-			<section class="actions-section">
-				<ul>
-					<li>Nueva encomienda +</li>
-					<li>Mis encomiendas</li>
-				</ul>
+			<section class="packages-section">
+				<h3>Envíos recientes</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Fecha</th>
+							<th>Factura</th>
+							<th>Destinatario</th>
+							<th>Destino</th>
+							<th>Estado</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>2023-05-02</td>
+							<td>001-002-123456789</td>
+							<td>Lorenzo Rodriguez Lopez</td>
+							<td>Manta, Manabí</td>
+							<td>
+								<p class="table-state">
+									<span>En curso</span>
+									<span class="table-waiting-state"></span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>2023-05-02</td>
+							<td>001-002-987654321</td>
+							<td>Maria Sanchez Garcia</td>
+							<td>Quito, Pichincha</td>
+							<td>
+								<p class="table-state">
+									<span>En curso</span>
+									<span class="table-waiting-state"></span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>2023-05-02</td>
+							<td>001-002-567890123</td>
+							<td>Juan Perez Ramirez</td>
+							<td>Guayaquil, Guayas</td>
+							<td>
+								<p class="table-state">
+									<span>En curso</span>
+									<span class="table-waiting-state"></span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>2023-05-02</td>
+							<td>001-002-234567890</td>
+							<td>Ana Martinez Perez</td>
+							<td>Cuenca, Azuay</td>
+							<td>
+								<p class="table-state">
+									<span>Enviado</span>
+									<span class="table-sent-state"></span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>2023-05-02</td>
+							<td>001-002-345678901</td>
+							<td>Pedro Gonzalez Rodriguez</td>
+							<td>Loja, Loja</td>
+							<td>
+								<p class="table-state">
+									<span>Enviado</span>
+									<span class="table-sent-state"></span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>2023-05-02</td>
+							<td>001-002-789012345</td>
+							<td>Laura Garcia Gomez</td>
+							<td>Ibarra, Imbabura</td>
+							<td>
+								<p class="table-state">
+									<span>Enviado</span>
+									<span class="table-sent-state"></span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>2023-05-02</td>
+							<td>001-002-456789012</td>
+							<td>Fernando Rodriguez Diaz</td>
+							<td>Santo Domingo, Santo Domingo</td>
+							<td>
+								<p class="table-state">
+									<span>Enviado</span>
+									<span class="table-sent-state"></span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>2023-05-02</td>
+							<td>001-002-890123456</td>
+							<td>Sofia Hernandez Lopez</td>
+							<td>Portoviejo, Manabí</td>
+							<td>
+								<p class="table-state">
+									<span>Enviado</span>
+									<span class="table-sent-state"></span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>2023-05-02</td>
+							<td>001-002-567890123</td>
+							<td>Carlos Perez Martinez</td>
+							<td>Salinas, Guayas</td>
+							<td>
+								<p class="table-state">
+									<span>Anulado</span>
+									<span class="table-cancelled-state"></span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>2023-05-02</td>
+							<td>001-002-678901234</td>
+							<td>Luisa Gomez Fernandez</td>
+							<td>Esmeraldas, Esmeraldas</td>
+							<td>
+								<p class="table-state">
+									<span>Anulado</span>
+									<span class="table-cancelled-state"></span>
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</section>
 		</main>
+		<script src="scripts/client-dashboard.js"></script>
 	</body>
 </html>
