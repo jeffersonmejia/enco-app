@@ -1,0 +1,129 @@
+:root {
+	--bg: #fff;
+	--primary-border: 1px solid rgb(190, 190, 190);
+	--secondary-border: 1px solid rgb(220, 220, 220);
+	--primary-border-radius: 4px;
+	--primary-text-color: rgb(100, 100, 100);
+	--secondary-text-color: white;
+	--primary-button-color: rgb(0, 101, 179);
+	--secondary-button-color: rgb(40, 40, 40);
+	--primary-box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	color: var(--primary-text-color);
+}
+nav {
+	border-bottom: var(--primary-border);
+}
+.navbar-items {
+	padding: 0.5rem 1rem;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.account-navbar {
+	cursor: pointer;
+}
+.account-navbar-items {
+	width: 200px;
+	position: absolute;
+	transform: translate(-85%, 30%);
+	list-style: none;
+	padding: 0.5rem 1rem;
+	border-radius: var(--primary-border-radius);
+	border: var(--secondary-border);
+	font-size: 0.9rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+.account-navbar-items li {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	cursor: pointer;
+}
+.account-navbar-items span {
+	font-size: 1.3rem;
+}
+.account-navbar-items a {
+	text-decoration: none;
+	color: var(--primary-text-color);
+}
+section {
+	margin: 1rem;
+}
+.welcome-section {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.actions-section ul {
+	list-style: none;
+}
+
+form {
+	border: var(--primary-border);
+	width: 90%;
+	border-radius: var(--primary-border-radius);
+	padding: 1rem;
+	margin: auto;
+	margin-top: 2rem;
+}
+
+fieldset {
+	border: none;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+legend {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	margin: 2rem 0;
+	width: 100%;
+}
+
+legend :is(h3, h4) {
+	font-weight: 400;
+	text-align: center;
+}
+
+input {
+	border: var(--primary-border);
+	border-radius: var(--primary-border-radius);
+	padding: 0.5rem;
+}
+input[type='submit'] {
+	border: none;
+}
+.group-button {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.back-button {
+	background-color: var(--bg);
+	font-size: 0.85rem;
+	text-decoration: none;
+	color: var(--secondary-button-color);
+	padding: 0.7rem 0;
+}
+.submit {
+	cursor: pointer;
+	background-color: var(--primary-button-color);
+	color: var(--secondary-text-color);
+	padding: 0.7rem 1rem;
+}

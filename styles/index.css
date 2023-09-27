@@ -1,0 +1,21 @@
+:root {
+	--bg: #fff;
+	--primary-color: rgb(240, 240, 240);
+	--primary-border: 1px solid rgb(190, 190, 190);
+	--primary-border-radius: 4px;
+	--primary-text-color: rgb(100, 100, 100);
+	--secondary-text-color: white;
+	--primary-button-color: rgb(0, 101, 179);
+	--secondary-button-color: rgb(40, 40, 40);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	color: var(--primary-text-color);
+}
