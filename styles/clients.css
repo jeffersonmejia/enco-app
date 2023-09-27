@@ -112,6 +112,9 @@ input[type='submit'] {
 	gap: 4px;
 	font-size: 0.9rem;
 }
+.help-group a {
+	color: var(--primary-text-color);
+}
 
 @media screen and (min-width: 700px) {
 	main {
