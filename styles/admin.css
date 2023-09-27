@@ -1,0 +1,130 @@
+:root {
+	--bg: #fff;
+	--primary-color: rgb(240, 240, 240);
+	--primary-border: 1px solid rgb(190, 190, 190);
+	--primary-border-radius: 4px;
+	--primary-text-color: rgb(100, 100, 100);
+	--secondary-text-color: white;
+	--primary-button-color: rgb(0, 101, 179);
+	--secondary-button-color: rgb(40, 40, 40);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	color: var(--primary-text-color);
+}
+.cover {
+	display: none;
+	height: 100vh;
+	position: relative;
+	background-color: black;
+}
+.cover img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	opacity: 0.25;
+}
+.cover figcaption {
+	position: absolute;
+	transform: translate(25%, 400%);
+	text-align: center;
+}
+.cover h2 {
+	color: var(--secondary-text-color);
+	font-size: 3rem;
+}
+
+form {
+	border: var(--primary-border);
+	width: 90%;
+	border-radius: var(--primary-border-radius);
+	padding: 1rem;
+	margin: auto;
+	margin-top: 2rem;
+}
+
+fieldset {
+	border: none;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+legend {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	margin: 2rem 0;
+	width: 100%;
+}
+
+legend :is(h3, h4) {
+	font-weight: 400;
+	text-align: center;
+}
+
+input {
+	border: var(--primary-border);
+	border-radius: var(--primary-border-radius);
+	padding: 0.5rem;
+}
+input[type='submit'] {
+	border: none;
+}
+.group-button {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.back-button {
+	background-color: var(--bg);
+	font-size: 0.85rem;
+	text-decoration: none;
+	color: var(--secondary-button-color);
+	padding: 0.7rem 0;
+}
+.submit {
+	cursor: pointer;
+	background-color: var(--primary-button-color);
+	color: var(--secondary-text-color);
+	padding: 0.7rem 1rem;
+}
+.help-group {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin: 1rem 0;
+}
+
+.help-group li {
+	list-style: none;
+	width: 100%;
+	display: flex;
+	gap: 4px;
+	font-size: 0.9rem;
+}
+.help-group a {
+	color: var(--primary-text-color);
+}
+
+@media screen and (min-width: 700px) {
+	main {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+	}
+	form {
+		margin-top: 7rem;
+	}
+	.cover {
+		display: flex;
+	}
+}
