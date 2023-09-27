@@ -44,7 +44,7 @@
 			</nav>
 			<section class="welcome-section">
 				<h2>Bienvenido, Jefferson</h2>
-				<button>Nueva encomienda +</button>
+				<button class="new-package-button">Nueva encomienda +</button>
 			</section>
 			<section class="packages-section">
 				<h3>Envíos recientes</h3>
@@ -194,6 +194,37 @@
 				</table>
 			</section>
 		</main>
+		<div class="package-form-modal hidden">
+			<form action="" class="package-form-content">
+				<fieldset>
+					<legend>
+						<h3>Datos del destinatario</h3>
+					</legend>
+					<input type="text" placeholder="Cédula/RUC" />
+					<input type="text" placeholder="Nombres" />
+					<input type="text" placeholder="Apellidos" />
+					<input type="text" placeholder="Teléfono" />
+					<select name="" id="" disabled>
+						<option value="0">Manabi</option>
+					</select>
+					<select name="" id="">
+						<option value="">Ciudad de destino</option>
+						<option value="">Flavio Alfaro</option>
+						<option value="">Chone</option>
+						<option value="">Tosagua</option>
+						<option value="">Rocafuerte</option>
+						<option value="">Portoviejo</option>
+						<option value="">Manta</option>
+						<option value="">Jipijapa</option>
+						<option value="">Puerto López</option>
+					</select>
+					<div class="input-group">
+						<small class="cancel-new-package">Cancelar</small>
+						<input type="submit" value="Enviar" class="submit-package" />
+					</div>
+				</fieldset>
+			</form>
+		</div>
 		<script src="scripts/client-dashboard.js"></script>
 	</body>
 </html>
