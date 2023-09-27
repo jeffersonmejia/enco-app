@@ -128,6 +128,9 @@ section {
 	padding: 4px 0;
 	text-align: center;
 }
+.desktop-table-item {
+	display: none;
+}
 form {
 	border: var(--primary-border);
 	width: 90%;
@@ -186,4 +189,9 @@ input[type='submit'] {
 }
 .hidden {
 	display: none;
+}
+@media screen and (min-width: 700px) {
+	.desktop-table-item {
+		display: table-cell;
+	}
 }
