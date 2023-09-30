@@ -268,8 +268,8 @@
 		</div>
 		<div class="account-modal modal hidden">
 			<section class="account-modal-content">
-				<article>
-					<ul class="account-modal-items">
+				<article class="account-modal-items">
+					<ul>
 						<li data-account="general">
 							<span class="material-symbols-outlined"> manage_accounts </span>
 							<p>General</p>
@@ -297,20 +297,88 @@
 							<label for="">Cédula/RUC</label>
 							<div class="input-edit-group">
 								<input type="text" value="1317268876" disabled />
-								<span class="material-symbols-outlined edit-button"> edit </span>
+								<span class="material-symbols-outlined edit-button">edit</span>
 							</div>
 							<label for="">Nombres</label>
 							<div class="input-edit-group">
 								<input type="text" value="Jefferson Paul" disabled />
-								<span class="material-symbols-outlined edit-button"> edit </span>
+								<span class="material-symbols-outlined edit-button">edit</span>
 							</div>
 							<label for="">Apellidos</label>
 							<div class="input-edit-group">
 								<input type="text" value="Mejía Chávez" disabled />
-								<span class="material-symbols-outlined edit-button"> edit </span>
+								<span class="material-symbols-outlined edit-button">edit</span>
 							</div>
 							<div class="input-group">
-								<small class="secondary-button">Volver</small>
+								<small class="secondary-button back-account-button">Volver</small>
+								<input type="submit" value="Guardar" class="primary-button" />
+							</div>
+						</fieldset>
+						<fieldset class="modal-account-personal hidden" data-account="security">
+							<legend>
+								<span class="material-symbols-outlined"> security </span>
+								<h4>Seguridad</h4>
+							</legend>
+							<label for="">Correo electrónico</label>
+							<div class="input-edit-group">
+								<input type="text" value="jeffersonmejiach01@gmail.com" disabled />
+								<span class="material-symbols-outlined edit-button">edit</span>
+							</div>
+							<label for="">Teléfono</label>
+							<div class="input-edit-group">
+								<input type="text" value="0987091528" disabled />
+								<span class="material-symbols-outlined edit-button">edit</span>
+							</div>
+							<label for="">Contraseña</label>
+							<div class="input-edit-group">
+								<input type="password" value="123456789" disabled />
+								<span class="material-symbols-outlined edit-button">edit</span>
+							</div>
+							<div class="input-group">
+								<small class="secondary-button back-account-button">Volver</small>
+								<input type="submit" value="Guardar" class="primary-button" />
+							</div>
+						</fieldset>
+						<fieldset class="modal-account-personal hidden" data-account="payment">
+							<legend>
+								<span class="material-symbols-outlined"> payments </span>
+								<h4>Método de pago</h4>
+							</legend>
+							<label for="">Tipo</label>
+							<div class="input-edit-group">
+								<input type="text" value="Tarjeta de débito" disabled />
+								<span class="material-symbols-outlined edit-button">edit</span>
+							</div>
+							<label for="">Banco</label>
+							<div class="input-edit-group">
+								<input type="text" value="Banco Pichincha" disabled />
+								<span class="material-symbols-outlined edit-button">edit</span>
+							</div>
+							<label for="">Titular</label>
+							<div class="input-edit-group">
+								<input type="text" value="Jefferson Paul Mejia Chavez" disabled />
+								<span class="material-symbols-outlined edit-button">edit</span>
+							</div>
+							<label for="">Tarjeta</label>
+							<div class="input-edit-group">
+								<input type="text" value="**** **** **** 8563" disabled />
+								<span class="material-symbols-outlined edit-button">edit</span>
+							</div>
+							<div class="input-group-grid">
+								<label for="">Fecha de caducidad</label>
+								<label for="">CVC</label>
+								<div class="input-edit-group">
+									<input type="text" value="11/25" disabled />
+									<span class="material-symbols-outlined edit-button">edit</span>
+								</div>
+
+								<div class="input-edit-group">
+									<input type="password" value="123" disabled />
+									<span class="material-symbols-outlined edit-button">edit</span>
+								</div>
+							</div>
+							<div class="input-group">
+								<small class="secondary-button back-account-button">Volver</small>
 								<input type="submit" value="Guardar" class="primary-button" />
 							</div>
 						</fieldset>

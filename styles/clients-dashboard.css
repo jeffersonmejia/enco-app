@@ -7,6 +7,7 @@
 	--primary-text-color: rgb(100, 100, 100);
 	--secondary-text-color: white;
 	--primary-button-color: rgb(0, 101, 179);
+	--border-active: 2px solid rgb(0, 101, 179);
 	--secondary-button-color: rgb(40, 40, 40);
 	--primary-box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
 	--primary-shadow: 1px 1px 12px rgb(0, 0, 0, 0.3);
@@ -269,7 +270,12 @@ input[type='submit'] {
 	align-items: center;
 	justify-content: center;
 }
-
+.input-group-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 12px;
+	margin-top: 12px;
+}
 .account-modal-content {
 	background-color: var(--bg);
 	padding: 2rem;
@@ -278,9 +284,8 @@ input[type='submit'] {
 	box-shadow: var(--primary-box-shadow);
 	width: 90%;
 	max-width: 550px;
-	max-height: 80vh;
 }
-.account-modal-items {
+.account-modal-items ul {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
@@ -325,7 +330,6 @@ input[type='submit'] {
 .input-edit-group {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	background-color: var(--secondary-bg-color);
 	padding: 8px;
 	border-radius: var(--primary-border-radius);
@@ -333,6 +337,15 @@ input[type='submit'] {
 }
 .input-edit-group input {
 	border: none;
+	outline: none;
+	flex-grow: 1;
+}
+.input-edit-group-active {
+	background-color: var(--bg);
+	border: var(--border-active);
+}
+.input-edit-group-active span {
+	color: var(--primary-button-color);
 }
 
 .account-modal-content .group-button {

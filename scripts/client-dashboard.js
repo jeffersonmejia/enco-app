@@ -4,7 +4,10 @@ const d = document,
 	$packageClient = d.querySelector('.package-client'),
 	$packageDescription = d.querySelector('.package-description'),
 	$accountModal = d.querySelector('.account-modal'),
-	$accountEdit = d.querySelector('.modal-account-edit')
+	$accountEdit = d.querySelector('.modal-account-edit'),
+	$accountModalItems = d.querySelector('.account-modal-items')
+
+let currentSettingSection = ''
 
 function toggleAccountItems() {
 	$account.classList.toggle('hidden')
@@ -24,9 +27,19 @@ function toggleAccountModal() {
 }
 
 function toggleAccountSection(section) {
-	const name = section.dataset.account || '',
-		sectionId = $accountEdit.querySelector(`[data-account="${name}"]`)
-	console.log(sectionId)
+	if (section) {
+		currentSettingSection = section?.dataset.account || ''
+		if (currentSettingSection.length < 1) {
+			currentSettingSection = section.parentElement.dataset.account
+		}
+	}
+
+	const sectionId = $accountEdit.querySelector(
+		`[data-account="${currentSettingSection}"]`
+	)
+	$accountModalItems.classList.toggle('hidden')
+	$accountEdit.classList.toggle('hidden')
+	sectionId?.classList.toggle('hidden')
 }
 
 d.addEventListener('click', (e) => {
@@ -67,5 +80,16 @@ d.addEventListener('click', (e) => {
 		e.target.matches('.account-modal-items li *')
 	) {
 		toggleAccountSection(e.target)
+	}
+	if (e.target.matches('.back-account-button')) {
+		toggleAccountSection()
+	}
+	if (e.target.matches('.edit-button')) {
+		const parent = e.target.parentElement
+		const input = parent.querySelector('input')
+		console.log(e.target)
+		e.target.textContent = e.target.textContent === 'edit' ? 'save' : 'edit'
+		parent.classList.toggle('input-edit-group-active')
+		input.disabled = !input.disabled
 	}
 })
