@@ -17,38 +17,38 @@
 		<link rel="stylesheet" href="./styles/clients-dashboard.css" />
 	</head>
 	<body>
+		<nav>
+			<ul class="navbar-items">
+				<li>
+					<h1 class="logo">Enco App</h1>
+				</li>
+				<li>
+					<span class="material-symbols-outlined account-navbar"> person </span>
+					<ul class="account-navbar-items hidden">
+						<li id="my-account-button">
+							<span class="material-symbols-outlined"> manage_accounts </span>
+							<p>Mi cuenta</p>
+						</li>
+						<li>
+							<a href="./clients.html">
+								<span class="material-symbols-outlined"> logout </span>
+								<p>Salir</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
 		<main>
-			<nav>
-				<ul class="navbar-items">
-					<li>
-						<h1 class="logo">Enco App</h1>
-					</li>
-					<li>
-						<span class="material-symbols-outlined account-navbar"> person </span>
-						<ul class="account-navbar-items hidden">
-							<li>
-								<a href="">
-									<span class="material-symbols-outlined"> manage_accounts </span>
-									<p>Mi cuenta</p>
-								</a>
-							</li>
-							<li>
-								<a href="./clients.html">
-									<span class="material-symbols-outlined"> logout </span>
-									<p>Salir</p>
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
 			<section class="welcome-section">
 				<h2>Bienvenido, Jefferson</h2>
 				<button class="new-package-button">Nueva encomienda +</button>
 			</section>
 			<section class="packages-section">
-				<h3>Envíos recientes</h3>
 				<table>
+					<caption>
+						Últimos envíos
+					</caption>
 					<thead>
 						<tr>
 							<th>No</th>
@@ -196,19 +196,20 @@
 		</main>
 		<div class="package-form-modal hidden">
 			<form action="" class="package-form-content">
-				<fieldset>
+				<fieldset class="package-client">
 					<legend>
 						<h3>Datos del destinatario</h3>
 					</legend>
-					<input type="text" placeholder="Cédula/RUC" />
-					<input type="text" placeholder="Nombres" />
-					<input type="text" placeholder="Apellidos" />
-					<input type="text" placeholder="Teléfono" />
-					<select name="" id="" disabled>
+					<input type="text" placeholder="Cédula/RUC" name="dni" />
+					<input type="text" placeholder="Nombres" name="name" />
+					<input type="text" placeholder="Apellidos" name="lastname" />
+					<input type="text" placeholder="Teléfono" name="tel" />
+					<select name="province" id="" disabled>
 						<option value="0">Manabi</option>
 					</select>
-					<select name="" id="">
+					<select name="city" id="">
 						<option value="">Ciudad de destino</option>
+						<option value="">El Carmen</option>
 						<option value="">Flavio Alfaro</option>
 						<option value="">Chone</option>
 						<option value="">Tosagua</option>
@@ -219,11 +220,163 @@
 						<option value="">Puerto López</option>
 					</select>
 					<div class="input-group">
-						<small class="cancel-new-package">Cancelar</small>
-						<input type="submit" value="Enviar" class="submit-package" />
+						<small class="secondary-button" id="cancel-package-button">Cancelar</small>
+						<input
+							type="submit"
+							value="Siguiente"
+							class="primary-button"
+							id="next-package-button"
+						/>
+					</div>
+				</fieldset>
+				<fieldset class="package-description hidden">
+					<legend>
+						<h3>Datos de la encomienda</h3>
+					</legend>
+					<select name="type-package" id="">
+						<option value="">Tipo de encomienda</option>
+						<option value="">Saco</option>
+						<option value="">Bulto</option>
+						<option value="">Paquete</option>
+					</select>
+					<input type="text" placeholder="Descripción de la encomienda" />
+					<table class="price-table">
+						<tr>
+							<th>Costo envío</th>
+							<td>$2.00</td>
+						</tr>
+						<tr>
+							<th>Costo encomienda</th>
+							<td>$5.00</td>
+						</tr>
+						<tr>
+							<th>Costo total</th>
+							<td>$7.00</td>
+						</tr>
+					</table>
+					<div class="input-group">
+						<small class="secondary-button" id="back-package-button">Volver</small>
+						<input
+							type="submit"
+							value="Enviar"
+							class="primary-button"
+							id="submit-package-button"
+						/>
 					</div>
 				</fieldset>
 			</form>
+		</div>
+		<div class="account-modal modal hidden">
+			<section class="account-modal-content">
+				<ul class="account-modal-items">
+					<li>
+						<span class="material-symbols-outlined"> manage_accounts </span>
+						<p>General</p>
+					</li>
+					<li>
+						<span class="material-symbols-outlined"> security </span>
+						<p>Seguridad</p>
+					</li>
+					<li>
+						<span class="material-symbols-outlined"> payments </span>
+						<p>Método de pago</p>
+					</li>
+				</ul>
+				<small class="close-account-modal">
+					<span class="secondary-button">Cerrar</span>
+				</small>
+				<!-- <article>
+					<table>
+						<caption>
+							Datos personales
+						</caption>
+						<thead>
+							<td>Cédula/RUC</td>
+							<td>Nombres</td>
+							<td>Apellidos</td>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1317268876</td>
+								<td>Jefferson Paul</td>
+								<td>Mejia Chavez</td>
+							</tr>
+						</tbody>
+					</table>
+					<table>
+						<caption>
+							Contacto y acceso
+						</caption>
+						<thead>
+							<th>Teléfono</th>
+							<th>Correo electrónico</th>
+							<th>Contraseña</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>0987091528</td>
+								<td>jeffersonmejiach01@gmail.com</td>
+								<td>********</td>
+							</tr>
+						</tbody>
+					</table>
+					<table>
+						<caption>
+							Dirección
+						</caption>
+						<tr>
+							<th>Sector</th>
+							<td>Urb. Ciudad Verde</td>
+						</tr>
+						<tr>
+							<th>Calle 1</th>
+							<td>Manglares Morro</td>
+						</tr>
+						<tr>
+							<th>Calle 2</th>
+							<td>Parque Nacional Galápagos</td>
+						</tr>
+						<tr>
+							<th>Casa y lote</th>
+							<td>N29-114</td>
+						</tr>
+						<tr>
+							<th>Referencia</th>
+							<td>Casa Amarilla</td>
+						</tr>
+					</table>
+
+					<table>
+						<caption>
+							Método de pago
+						</caption>
+						<tr>
+							<th>Tipo</th>
+							<td>Transferencia</td>
+						</tr>
+						<tr>
+							<th>Banco</th>
+							<td>Banco Pichincha</td>
+						</tr>
+						<tr>
+							<th>Tarjeta</th>
+							<td>**** **** **** 8632</td>
+						</tr>
+						<tr>
+							<th>Fecha de expiración</th>
+							<td>2026/11</td>
+						</tr>
+						<tr>
+							<th>CVC</th>
+							<td>256</td>
+						</tr>
+					</table>
+					<div class="group-button">
+						<small class="secondary-button" id="close-account-modal">Cerrar</small>
+						<button class="primary-button">Editar</button>
+					</div>
+				</article> -->
+			</section>
 		</div>
 		<script src="scripts/client-dashboard.js"></script>
 	</body>

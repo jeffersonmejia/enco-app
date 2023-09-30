@@ -1,5 +1,6 @@
 :root {
 	--bg: #fff;
+	--secondary-bg-color: rgb(235, 235, 235);
 	--primary-border: 1px solid rgb(190, 190, 190);
 	--secondary-border: 1px solid rgb(220, 220, 220);
 	--primary-border-radius: 4px;
@@ -13,6 +14,7 @@
 	--waiting-state: rgb(255, 161, 61);
 	--cancelled-state: red;
 	--transparent-50: rgba(0, 0, 0, 0.5);
+	--gray-transparent-30: rgba(200, 200, 200, 0.3);
 }
 
 * {
@@ -35,7 +37,10 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 }
-
+main {
+	max-width: 1080px;
+	margin: auto;
+}
 .account-navbar {
 	cursor: pointer;
 }
@@ -51,6 +56,11 @@ nav {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--bg);
+	gap: 6px;
+}
+button {
+	border: none;
+	border-radius: var(--primary-border-radius);
 }
 .logo {
 	font-weight: 400;
@@ -70,7 +80,6 @@ nav {
 	gap: 8px;
 	width: 100%;
 	color: var(--primary-text-color);
-	padding: 4px 0;
 }
 
 section {
@@ -103,15 +112,21 @@ section {
 	font-weight: 300;
 	font-size: 1.5rem;
 }
-.packages-section table,
-.packages-section :is(td, th) {
+table,
+table :is(td, th) {
 	border: var(--primary-border);
 	border-collapse: collapse;
 }
-.packages-section table {
+table {
 	width: 100%;
 }
-.packages-section :is(th, td) {
+table :is(th, td) {
+	padding: 4px;
+	text-align: right;
+}
+caption {
+	border: var(--primary-border);
+	border-bottom: none;
 	padding: 4px;
 	text-align: right;
 }
@@ -139,6 +154,10 @@ section {
 .packages-section :is(th, td):last-child {
 	padding: 4px 0;
 	text-align: center;
+}
+.packages-section table {
+	margin: auto;
+	margin-top: 1.5rem;
 }
 .desktop-table-item {
 	display: none;
@@ -187,14 +206,16 @@ input[type='submit'] {
 	align-items: center;
 	justify-content: space-between;
 }
-.back-button {
+.secondary-button {
 	background-color: var(--bg);
 	font-size: 0.85rem;
 	text-decoration: none;
-	color: var(--secondary-button-color);
+	color: var(--primary-text-color);
 	padding: 0.7rem 0;
+	cursor: pointer;
 }
-.submit {
+
+.primary-button {
 	cursor: pointer;
 	background-color: var(--primary-button-color);
 	color: var(--secondary-text-color);
@@ -230,13 +251,71 @@ input[type='submit'] {
 .input-group small {
 	cursor: pointer;
 }
-.submit-package {
+.primary-button {
 	background-color: var(--primary-button-color);
 	color: var(--bg);
 	cursor: pointer;
 	padding: 0.7rem 1.5rem;
 }
 
+.modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--gray-transparent-30);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.account-modal-content {
+	background-color: var(--bg);
+	padding: 2rem;
+	padding-bottom: 1.1rem;
+	border-radius: var(--primary-border-radius);
+	box-shadow: var(--primary-box-shadow);
+	width: 90%;
+	max-width: 550px;
+	max-height: 80vh;
+}
+.account-modal-items {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.account-modal-items li {
+	display: flex;
+	gap: 4px;
+	background-color: var(--secondary-bg-color);
+	padding: 8px;
+	border-radius: var(--primary-border-radius);
+	border: var(--primary-border);
+	cursor: pointer;
+}
+.close-account-modal {
+	display: flex;
+	justify-content: center;
+	margin-top: 16px;
+}
+.close-account-modal span {
+	padding: 0;
+}
+
+.account-modal-content caption {
+	margin-top: 1rem;
+}
+.account-modal-content table:first-child {
+	margin-top: 0;
+}
+.account-modal-content table:last-child {
+	margin-bottom: 0;
+}
+.account-modal-content .group-button {
+	margin-top: 1.3rem;
+}
 .hidden {
 	display: none;
 }
