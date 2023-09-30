@@ -303,18 +303,45 @@ input[type='submit'] {
 .close-account-modal span {
 	padding: 0;
 }
-
-.account-modal-content caption {
-	margin-top: 1rem;
+.modal-account-edit form {
+	padding: 0;
+	margin: 0;
+	margin: auto;
+	margin-bottom: 1rem;
+	border: none;
 }
-.account-modal-content table:first-child {
+.modal-account-edit label {
+	font-size: 0.85rem;
+	margin-top: 8px;
+}
+.modal-account-edit label:first-child {
 	margin-top: 0;
 }
-.account-modal-content table:last-child {
-	margin-bottom: 0;
+.modal-account-edit legend {
+	flex-direction: row;
+	margin: 0;
+	gap: 4px;
 }
+.input-edit-group {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--secondary-bg-color);
+	padding: 8px;
+	border-radius: var(--primary-border-radius);
+	border: var(--primary-border);
+}
+.input-edit-group input {
+	border: none;
+}
+
 .account-modal-content .group-button {
 	margin-top: 1.3rem;
+}
+
+.edit-button {
+	cursor: pointer;
+	font-size: 1.4rem;
 }
 .hidden {
 	display: none;

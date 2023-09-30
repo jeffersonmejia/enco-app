@@ -3,7 +3,8 @@ const d = document,
 	$packageForm = d.querySelector('.package-form-modal'),
 	$packageClient = d.querySelector('.package-client'),
 	$packageDescription = d.querySelector('.package-description'),
-	$accountModal = d.querySelector('.account-modal')
+	$accountModal = d.querySelector('.account-modal'),
+	$accountEdit = d.querySelector('.modal-account-edit')
 
 function toggleAccountItems() {
 	$account.classList.toggle('hidden')
@@ -20,6 +21,12 @@ function togglePackageFieldset() {
 
 function toggleAccountModal() {
 	$accountModal.classList.toggle('hidden')
+}
+
+function toggleAccountSection(section) {
+	const name = section.dataset.account || '',
+		sectionId = $accountEdit.querySelector(`[data-account="${name}"]`)
+	console.log(sectionId)
 }
 
 d.addEventListener('click', (e) => {
@@ -54,5 +61,11 @@ d.addEventListener('click', (e) => {
 	}
 	if (e.target.matches('.close-account-modal span')) {
 		toggleAccountModal()
+	}
+	if (
+		e.target.matches('.account-modal-items li') ||
+		e.target.matches('.account-modal-items li *')
+	) {
+		toggleAccountSection(e.target)
 	}
 })

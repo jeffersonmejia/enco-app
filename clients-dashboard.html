@@ -268,23 +268,54 @@
 		</div>
 		<div class="account-modal modal hidden">
 			<section class="account-modal-content">
-				<ul class="account-modal-items">
-					<li>
-						<span class="material-symbols-outlined"> manage_accounts </span>
-						<p>General</p>
-					</li>
-					<li>
-						<span class="material-symbols-outlined"> security </span>
-						<p>Seguridad</p>
-					</li>
-					<li>
-						<span class="material-symbols-outlined"> payments </span>
-						<p>Método de pago</p>
-					</li>
-				</ul>
-				<small class="close-account-modal">
-					<span class="secondary-button">Cerrar</span>
-				</small>
+				<article>
+					<ul class="account-modal-items">
+						<li data-account="general">
+							<span class="material-symbols-outlined"> manage_accounts </span>
+							<p>General</p>
+						</li>
+						<li data-account="security">
+							<span class="material-symbols-outlined"> security </span>
+							<p>Seguridad</p>
+						</li>
+						<li data-account="payment">
+							<span class="material-symbols-outlined"> payments </span>
+							<p>Método de pago</p>
+						</li>
+					</ul>
+					<small class="close-account-modal">
+						<span class="secondary-button">Cerrar</span>
+					</small>
+				</article>
+				<article class="modal-account-edit hidden">
+					<form action="">
+						<fieldset class="modal-account-personal hidden" data-account="general">
+							<legend>
+								<span class="material-symbols-outlined"> manage_accounts </span>
+								<h4>General</h4>
+							</legend>
+							<label for="">Cédula/RUC</label>
+							<div class="input-edit-group">
+								<input type="text" value="1317268876" disabled />
+								<span class="material-symbols-outlined edit-button"> edit </span>
+							</div>
+							<label for="">Nombres</label>
+							<div class="input-edit-group">
+								<input type="text" value="Jefferson Paul" disabled />
+								<span class="material-symbols-outlined edit-button"> edit </span>
+							</div>
+							<label for="">Apellidos</label>
+							<div class="input-edit-group">
+								<input type="text" value="Mejía Chávez" disabled />
+								<span class="material-symbols-outlined edit-button"> edit </span>
+							</div>
+							<div class="input-group">
+								<small class="secondary-button">Volver</small>
+								<input type="submit" value="Guardar" class="primary-button" />
+							</div>
+						</fieldset>
+					</form>
+				</article>
 				<!-- <article>
 					<table>
 						<caption>
