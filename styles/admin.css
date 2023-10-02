@@ -45,7 +45,7 @@ html {
 form {
 	border: var(--primary-border);
 	width: 90%;
-	height: 80vh;
+	height: 70vh;
 	max-width: 400px;
 	border-radius: var(--primary-border-radius);
 	padding: 1rem;
@@ -90,7 +90,7 @@ input[type='submit'] {
 }
 .back-button {
 	background-color: var(--bg);
-	font-size: 0.85rem;
+	font-size: 0.8rem;
 	text-decoration: none;
 	color: var(--secondary-button-color);
 	padding: 0.7rem 0;
@@ -99,7 +99,9 @@ input[type='submit'] {
 	cursor: pointer;
 	background-color: var(--primary-button-color);
 	color: var(--secondary-text-color);
-	padding: 0.7rem 1rem;
+	height: 2.1rem;
+	width: 80px;
+	font-weight: 300;
 }
 .help-group {
 	display: flex;
