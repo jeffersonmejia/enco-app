@@ -18,39 +18,71 @@
 html {
 	font-family: 'Open Sans', sans-serif;
 	color: var(--primary-text-color);
-	padding: 1rem;
-}
-main {
-	max-width: 800px;
-	margin: auto;
-}
-hgroup {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	align-items: center;
-	margin-bottom: 2rem;
-}
-hgroup h1 {
-	font-size: 1.8rem;
-	font-weight: 300;
-}
-hgroup h2 {
-	font-size: 1.5rem;
-	font-weight: 300;
 }
 img {
-	border-radius: var(--primary-border-radius);
 	width: 100%;
+}
+nav {
+	border-bottom: var(--primary-border);
+	padding: 0.5rem 1rem;
+}
+header {
+	height: 90vh;
+	margin-bottom: 1rem;
+	overflow: hidden;
+}
+header figure {
+	position: relative;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+header figcaption {
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	padding: 0 1.1rem;
+}
+header :is(h2, h3) {
+	text-align: center;
+}
+header h3 {
+	color: rgb(200, 200, 200);
+}
+header h2 {
+	font-size: 2.5rem;
+	color: var(--bg);
+}
+header img {
 	height: 100%;
 	object-fit: cover;
-	object-position: center;
+	object-position: bottom;
+	opacity: 0.5;
 }
+main {
+	margin: auto;
+}
+
 .user-items {
+	max-width: 800px;
 	margin: auto;
 	display: grid;
 	gap: 12px;
 	list-style: none;
+	padding: 0.5rem 1rem;
+}
+.user-items img {
+	border-radius: var(--primary-border-radius);
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 .user-items a {
 	text-decoration: none;
@@ -64,9 +96,16 @@ img {
 	height: 100%;
 	font-size: 0.95rem;
 }
-
+footer {
+	margin-top: 1rem;
+}
 @media screen and (min-width: 500px) {
 	.user-items {
 		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media screen and (min-width: 900px) {
+	header figcaption {
+		padding: 0;
 	}
 }
