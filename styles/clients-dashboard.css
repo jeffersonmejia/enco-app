@@ -63,9 +63,6 @@ button {
 	border: none;
 	border-radius: var(--primary-border-radius);
 }
-.logo {
-	font-weight: 400;
-}
 .account-navbar-items li {
 	display: flex;
 	gap: 8px;
