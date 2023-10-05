@@ -1,2 +1,5 @@
-const express = require('express')
-module.exports = express()
+const express = require('express'),
+	app = express()
+
+app.use(express.static('src/public'))
+module.exports = app
