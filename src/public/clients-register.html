@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Enco App - Registrarse</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<!-- FAVICON & STYLES -->
+		<link rel="stylesheet" href="styles/clients-register.css" />
+		<!-- OPEN GRAPH - FACEBOOK -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://jeffersonmejia.github.io/enco-app" />
+		<meta property="og:title" content="Enco App" />
+		<meta property="og:description" content="Lo hacemos por ti" />
+		<meta property="og:image" content="https://i.postimg.cc/q7KvkZTk/Slide-4-3-1-1.png" />
+
+		<!-- TWITTER -->
+		<meta
+			property="twitter:card"
+			content="https://i.postimg.cc/q7KvkZTk/Slide-4-3-1-1.png"
+		/>
+		<meta property="twitter:title" content="Enco App" />
+		<meta property="twitter:description" content="Lo hacemos por ti" />
+		<meta
+			property="twitter:image"
+			content="https://i.postimg.cc/q7KvkZTk/Slide-4-3-1-1.png"
+		/>
+		<meta property="twitter:url" content="https://jeffersonmejia.github.io/enco-app" />
+	</head>
+	<body>
+		<main>
+			<figure class="cover">
+				<img src="assets/cover-clients.jpg" alt="Foto de enco App clientes" />
+				<figcaption>
+					<h2>Lo hacemos por ti</h2>
+				</figcaption>
+			</figure>
+			<form action="" method="get">
+				<fieldset id="form-general">
+					<legend>
+						<h3>Registro</h3>
+						<h4>Información general</h4>
+					</legend>
+					<input type="text" placeholder="Cédula/RUC" name="dni" maxlength="13" />
+					<input type="text" placeholder="Nombres" name="name" />
+					<input type="text" placeholder="Apellidos" name="lastname" />
+					<div class="group-button">
+						<a href="/clientes" class="back-button">Volver</a>
+						<input type="submit" value="Continuar" class="submit" id="submit-general" />
+					</div>
+				</fieldset>
+				<fieldset id="form-address" class="hidden">
+					<legend>
+						<h3>Registro</h3>
+						<h4>Información de dirección</h4>
+					</legend>
+					<input type="text" placeholder="calle 1" name="address1" />
+					<input type="text" placeholder="calle 2" name="address2" />
+					<input type="text" placeholder="Referencia" name="address-referece" />
+					<div class="group-button">
+						<small class="back-button" id="back-address">Volver</small>
+						<input type="submit" value="Continuar" class="submit" id="submit-address" />
+					</div>
+				</fieldset>
+				<fieldset id="form-security" class="hidden">
+					<legend>
+						<h3>Registro</h3>
+						<h4>Acceso y seguridad</h4>
+					</legend>
+					<input type="email" placeholder="Correo electrónico" name="" maxlength="32" />
+					<input type="tel" placeholder="Teléfono" name="" maxlength="10" />
+					<input type="password" placeholder="Contraseña" name="" maxlength="16" />
+					<div class="group-button">
+						<small class="back-button" id="back-security">Volver</small>
+						<input type="submit" value="Continuar" class="submit" id="submit-security" />
+					</div>
+				</fieldset>
+				<fieldset id="form-payment" class="hidden">
+					<legend>
+						<h3>Registro</h3>
+						<h4>Método de pago</h4>
+						<small>No realizaremos ningún débito en tu cuenta sin tu autorización</small>
+					</legend>
+					<select id="payment-type">
+						<option value="">Selecciona tu método de pago</option>
+						<option value="">Efectivo</option>
+						<option value="">Tarjeta de débito</option>
+						<option value="">Tarjeta de crédito</option>
+					</select>
+					<select id="">
+						<option value="">Selecciona el Banco</option>
+						<option value="">Banco Pichincha</option>
+						<option value="">Banco Guayaquil</option>
+						<option value="">Banco Bolivariano</option>
+					</select>
+					<input
+						type="text"
+						placeholder="Número de tarjeta"
+						name="card-number"
+						maxlength="16"
+					/>
+					<input
+						type="text"
+						placeholder="Fecha de caducidad"
+						name="card-expire"
+						maxlength="5"
+					/>
+					<input type="password" placeholder="CVC" name="cvc" maxlength="3" />
+					<div class="group-button">
+						<small class="back-button" id="back-payment">Volver</small>
+						<input type="submit" value="Continuar" class="submit" id="submit-payment" />
+					</div>
+				</fieldset>
+			</form>
+		</main>
+		<script type="module" src="./scripts/client-register.js"></script>
+	</body>
+</html>

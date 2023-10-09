@@ -149,8 +149,7 @@ d.addEventListener('click', (e) => {
 	if (e.target.matches('.edit-button')) {
 		const parent = e.target.parentElement
 		const input = parent.querySelector('input')
-		console.log(e.target)
-		e.target.textContent = e.target.textContent === 'edit' ? 'save' : 'edit'
+
 		parent.classList.toggle('input-edit-group-active')
 		input.disabled = !input.disabled
 	}
