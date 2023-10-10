@@ -49,7 +49,7 @@ form {
 	border-radius: var(--primary-border-radius);
 	padding: 1rem;
 	margin: auto;
-	margin-top: 6rem;
+	margin-top: 4rem;
 	padding-bottom: 3rem;
 }
 
@@ -72,9 +72,15 @@ legend {
 
 legend :is(h3, h4) {
 	font-weight: 400;
-	text-align: center;
+	text-align: left;
 }
-
+legend h4 {
+	font-size: 0.9rem;
+}
+legend small {
+	margin-top: 0.2rem;
+	text-align: left;
+}
 input,
 select {
 	border: var(--primary-border);
@@ -103,6 +109,21 @@ input[type='submit'] {
 	color: var(--secondary-text-color);
 	height: 2.1rem;
 	font-weight: 300;
+}
+.notification {
+	border: none;
+	position: fixed;
+	width: 100%;
+	max-width: 350px;
+	right: 2vw;
+	bottom: 2vh;
+	background-color: rgb(230, 230, 230);
+	border: var(--primary-border);
+	border-radius: var(--primary-border-radius);
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
 }
 .hidden {
 	display: none;

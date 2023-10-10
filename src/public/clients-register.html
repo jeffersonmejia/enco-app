@@ -94,7 +94,9 @@
 					<legend>
 						<h3>Registro</h3>
 						<h4>Método de pago</h4>
-						<small>No realizaremos ningún débito en tu cuenta sin tu autorización</small>
+						<small class="online-payment hidden"
+							>No realizaremos ningún débito en tu cuenta sin tu autorización</small
+						>
 					</legend>
 					<select id="payment-type" name="payment-type">
 						<option value="0">Selecciona tu método de pago</option>
@@ -102,26 +104,39 @@
 						<option value="2">Tarjeta de débito</option>
 						<option value="3">Tarjeta de crédito</option>
 					</select>
-					<select id="payment-bank" name="payment-bank">
+					<select name="payment-bank" class="online-payment hidden">
 						<option value="0">Selecciona el Banco</option>
 						<option value="1">Banco Pichincha</option>
 						<option value="2">Banco Guayaquil</option>
 						<option value="3">Banco Bolivariano</option>
 					</select>
-					<input type="text" placeholder="Titular" name="card-owner" />
+					<input
+						type="text"
+						placeholder="Titular"
+						name="card-owner"
+						class="online-payment hidden"
+					/>
 					<input
 						type="text"
 						placeholder="Número de tarjeta"
 						name="card-number"
 						maxlength="16"
+						class="online-payment hidden"
 					/>
 					<input
 						type="text"
 						placeholder="Fecha de caducidad"
 						name="card-expire"
 						maxlength="5"
+						class="online-payment hidden"
 					/>
-					<input type="password" placeholder="CVC" name="cvc" maxlength="3" />
+					<input
+						type="password"
+						placeholder="CVC"
+						name="cvc"
+						maxlength="3"
+						class="online-payment hidden"
+					/>
 					<div class="group-button">
 						<small class="back-button" id="back-payment">Volver</small>
 						<input type="submit" value="Registrarme" class="submit" id="submit-payment" />
@@ -129,6 +144,10 @@
 				</fieldset>
 			</form>
 		</main>
+		<div class="notification hidden">
+			<h5></h5>
+			<small></small>
+		</div>
 		<script type="module" src="./scripts/client-register.js"></script>
 	</body>
 </html>

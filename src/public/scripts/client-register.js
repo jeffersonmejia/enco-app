@@ -5,9 +5,14 @@ const d = document,
 	$formAddress = d.getElementById('form-address'),
 	$formSecurity = d.getElementById('form-security'),
 	$formPayment = d.getElementById('form-payment'),
-	$backButton = d.getElementById('back-payment')
+	$backButton = d.getElementById('back-payment'),
+	$notification = d.querySelector('.notification'),
+	$notificationTitle = d.querySelector('.notification h5'),
+	$notificationMessage = d.querySelector('.notification small'),
+	$paymentOnlineItems = d.querySelectorAll('.online-payment')
 
-const API = 'localhost:3000/clientes-registrar'
+const API = 'localhost:3000/clientes-registrar',
+	MAX_NOTIFICATION_TIME = 5000
 let user = {}
 
 function toggleForm(prevForm, nextForm) {
@@ -43,6 +48,39 @@ function getInputsValue(inputs) {
 	return data
 }
 
+function togglePaymentItems(option) {
+	const items = Array.from($paymentOnlineItems)
+	items.forEach((item) => {
+		if (option > 1) {
+			item.classList.remove('hidden')
+		} else {
+			item.classList.add('hidden')
+		}
+	})
+}
+
+function nofityUser({ title = 'Notificación', message = 'Mensaje' }) {
+	const TIME = MAX_NOTIFICATION_TIME
+
+	let counter = TIME / 1000,
+		interval = null
+
+	$notificationTitle.textContent = title
+	interval = setInterval(() => {
+		if (counter < 1) {
+			clearInterval(interval)
+			$notification.classList.toggle('hidden')
+			$notificationTitle.textContent = ''
+			$notificationMessage.textContent = ''
+		}
+		$notificationMessage.textContent = `${message}(${counter}s)`
+		counter--
+	}, 1000)
+	setTimeout(() => {
+		$notification.classList.toggle('hidden')
+	}, 1000)
+}
+
 async function registerUser(newUser) {
 	const response = await http({ url: API, body: newUser, method: 'POST' })
 }
@@ -67,6 +105,13 @@ d.addEventListener('click', async (e) => {
 		e.target.style.disabled = true
 		$backButton.style.visibility = 'hidden'
 		disableInputs()
+		setTimeout(() => {
+			e.target.value = 'Registrarme'
+			nofityUser({ title: 'Registro', message: 'Usuario registrado con éxito' })
+		}, 2000)
+		setTimeout(() => {
+			location.href = '/'
+		}, 2000 + MAX_NOTIFICATION_TIME)
 		//await registerUser(user)
 	}
 	if (e.target.matches('#back-address')) {
@@ -77,5 +122,11 @@ d.addEventListener('click', async (e) => {
 	}
 	if (e.target.matches('#back-payment')) {
 		toggleForm($formPayment, $formSecurity)
+	}
+})
+d.addEventListener('change', (e) => {
+	if (e.target.matches('#payment-type')) {
+		const option = parseInt(e.target.value)
+		togglePaymentItems(option)
 	}
 })
