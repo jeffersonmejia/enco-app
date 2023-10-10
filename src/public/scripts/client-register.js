@@ -110,7 +110,7 @@ d.addEventListener('click', async (e) => {
 			nofityUser({ title: 'Registro', message: 'Usuario registrado con éxito' })
 		}, 2000)
 		setTimeout(() => {
-			location.href = '/'
+			location.href = '/clientes'
 		}, 2000 + MAX_NOTIFICATION_TIME)
 		//await registerUser(user)
 	}

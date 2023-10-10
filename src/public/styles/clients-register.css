@@ -80,6 +80,7 @@ legend h4 {
 legend small {
 	margin-top: 0.2rem;
 	text-align: left;
+	color: rgb();
 }
 input,
 select {
