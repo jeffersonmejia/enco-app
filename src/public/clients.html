@@ -23,7 +23,7 @@
 					<h2>Lo hacemos por ti</h2>
 				</figcaption>
 			</figure>
-			<form action="/clientes-panel" method="post">
+			<form action="/clientes-panel" method="post" id="login-form">
 				<fieldset>
 					<legend>
 						<h3>Ingreso</h3>
@@ -42,11 +42,30 @@
 						</li>
 						<li>
 							<p>¿Has olvidado tu contraseña?</p>
-							<a href="">restablécela</a>
+							<p class="help-group-recover">restablécela</p>
 						</li>
 					</ul>
 				</fieldset>
 			</form>
+			<form action="" id="recover-form" class="recover-form hidden">
+				<h3>Recuperar mi cuenta</h3>
+				<ul class="recover-options">
+					<li class="recover-option" id="recover-user">Usuario</li>
+					<li id="recover-password">Contraseña</li>
+				</ul>
+				<fieldset>
+					<input type="text" placeholder="Nombre de usuario" id="recover-input" />
+					<div class="group-button">
+						<small class="back-button back-recover">Volver</small>
+						<input type="submit" value="Enviar" class="submit" id="submit-recover" />
+					</div>
+				</fieldset>
+			</form>
+			<div class="notification hidden">
+				<h5></h5>
+				<small></small>
+			</div>
 		</main>
+		<script src="scripts/clients.js"></script>
 	</body>
 </html>

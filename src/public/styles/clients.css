@@ -121,6 +121,58 @@ input[type='submit'] {
 	color: var(--primary-text-color);
 }
 
+.recover-modal {
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.recover-options {
+	display: flex;
+	gap: 12px;
+	list-style: none;
+	margin-top: 0.4rem;
+}
+.recover-options li {
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+li.recover-option {
+	border-bottom: 2px solid var(--primary-button-color);
+	color: var(--primary-button-color);
+	cursor: default;
+}
+.help-group-recover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.recover-form fieldset {
+	margin-top: 1rem;
+}
+.recover-form .group-button small {
+	cursor: pointer;
+}
+
+.notification {
+	border: none;
+	position: fixed;
+	width: 100%;
+	max-width: 350px;
+	right: 2vw;
+	bottom: 2vh;
+	background-color: rgb(230, 230, 230);
+	border: var(--primary-border);
+	border-radius: var(--primary-border-radius);
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+}
+.hidden {
+	display: none;
+}
 @media screen and (min-width: 700px) {
 	main {
 		display: grid;
